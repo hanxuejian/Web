@@ -186,16 +186,14 @@
       tabled.appendChild(input);
       row.appendChild(tabled);
     }
-    document.getElementById('tableBody').appendChild(row);
-    // $('#tableBody').appendChild(row);
+    document.getElementById('tableBody').appendChild(row);    
   }
 
   var i = 10;
 
   function addAirlineLegBtnAction() {
     var key = "datepicker"+i;
-    var value = "2017-10-"+i;
-    console.log
+    var value = "2017-10-"+i;    
     createTableRow(key,[value,"9C8809","浦东","三亚"]);
     var dic = {};
     dic[key] = value;
@@ -204,30 +202,30 @@
   }
 
   // 添加日期显示事件 param {inputID1:defaultValue1,inputID2:defaultValue2,...]
-function bindDatePicker(param) {  
-  console.log(param)
+  function bindDatePicker(param) {  
+    console.log(param)
 
-  var currYear = (new Date()).getFullYear();
-  var opt={};
-  opt.date = {preset : 'date'};
-  opt.datetime = {preset : 'datetime'};
-  opt.time = {preset : 'time'};
-  opt.default = {
-      theme: 'android-ics light', //皮肤样式
-      display: 'modal', //显示方式
-      mode: 'scroller', //日期选择模式
-      lang: 'zh', //语言
-      dateFormat : "yy-mm-dd",      
-      startYear:currYear - 10, //开始年份
-      endYear:currYear + 5//结束年份
-  };
-  for (var key in param) {
-    var inputID = '#' + key;
-    var defaultValue = param[key];
-    $(inputID).val(defaultValue).scroller('destroy').scroller($.extend(opt['date'], opt['default']));
-    console.log(inputID);
+    var currYear = (new Date()).getFullYear();
+    var opt={};
+    opt.date = {preset : 'date'};
+    opt.datetime = {preset : 'datetime'};
+    opt.time = {preset : 'time'};
+    opt.default = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'modal', //显示方式
+        mode: 'scroller', //日期选择模式
+        lang: 'zh', //语言
+        dateFormat : "yy-mm-dd",      
+        startYear:currYear - 10, //开始年份
+        endYear:currYear + 5//结束年份
+    };
+    for (var key in param) {
+      var inputID = '#' + key;
+      var defaultValue = param[key];
+      $(inputID).val(defaultValue).scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+      console.log(inputID);
+    }
   }
-}
 
 
 </script>
