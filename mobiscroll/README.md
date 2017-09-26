@@ -61,5 +61,5 @@ mobiscroll 是一系列的 UI 控件集合，其面向网页与移动开发者�
 	```
 	详细的属性及方法可以参考[官方文档](https://docs.mobiscroll.com/jquery/datetime)
 	
-	[测试页面](./Test-mobiscroll.html)
+	[测试页面](https://hanxuejian.github.io/Web/mobiscroll/Test-mobiscroll.html)
 
